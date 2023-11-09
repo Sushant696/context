@@ -1,14 +1,12 @@
-
-import { MyProvider } from "./context/contextState";
-import Basket from "./pages/basket";
-import Home from "./pages/home";
+import Navbar from "./components/navbar";
+import Path from "./routing/path";
 
 const App = () => {
   return (
-    <MyProvider>
-        <Home/>
-        <Basket/>
-    </MyProvider>
+    <>
+    <Navbar/>
+      <Path />
+    </>
   );
 };
 

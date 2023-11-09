@@ -1,10 +1,10 @@
-import { useMyContext } from "../context/contextState"
 
 export default function Home() {
-  const data = useMyContext();
+
   return (
     <div>
-      <h2>hello everyone my context data -- {data}</h2>
+      <h2 className="text-[1.4rem] text-center">hello everyone my context data</h2>
+      {/* <button onClick={()=>{setData('hello world')}}>click me </button> */}
     </div>
   )
 }
