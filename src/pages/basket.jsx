@@ -2,7 +2,7 @@
 export default function Basket() {
   return (
     <div>
-        <h1>Welcome to basket page</h1>      
+        <h1>Welcome to basket</h1>      
     </div>
   )
 }
