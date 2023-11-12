@@ -1,11 +1,18 @@
-import Navbar from "./components/navbar";
-import Path from "./routing/path";
+// import Navbar from "./components/navbar";
+import  UserContextProvider from "./context/userContextProvider";
+import Login from "./pages/login";
+import Profile from "./pages/profile";
+// import Path from "./routing/path";
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-      <Path />
+    < UserContextProvider>
+    {/* <Navbar/> */}
+      {/* <Path /> */}
+      <Login/>
+      <Profile/>
+    </UserContextProvider>
     </>
   );
 };

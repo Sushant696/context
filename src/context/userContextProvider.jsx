@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import { useState } from "react";
 import UserContext from "./userContext";
 
-const UserContextProvider = ({children}) => {
-    const [user , setUser] = React.useState(null)
+const  UserContextProvider  = ({children})=> {
+    const [user, setUser] = useState(null);
+    console.log("User State:", user);
+    
     return (
         <UserContext.Provider  value={{user, setUser}}>
             {children}
