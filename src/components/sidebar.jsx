@@ -1,46 +1,20 @@
-import { useState } from "react";
-// import "./Sidebar.css";
+import { Menu } from 'antd';
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const handleSidebarOpen = () => {
-    setSidebarOpen(true);
-  };
-
-  const handleSidebarClose = () => {
-    setSidebarOpen(false);
-  };
-
-  return (
-    <div className="sidebar">
-      {!sidebarOpen ? (
-        <div className="sidebar_icon" onMouseEnter={handleSidebarOpen}>
-          <i className="fas fa-bars"></i>
-        </div>
-      ) : (
-        <>
-          <div className="sidebar_icon" onMouseLeave={handleSidebarClose}>
-            <i className="fas fa-times"></i>
-          </div>
-          <div className="sidebar_items">
-            <div className="sidebar_item">
-              <i className="fas fa-home"></i>
-              <p>Smartphones</p>
-            </div>
-            <div className="sidebar_item">
-              <i className="fas fa-user"></i>
-              <p>laptops</p>
-            </div>
-            <div className="sidebar_item">
-              <i className="fas fa-envelope"></i>
-              <p>Groceries</p>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+const SideBar = () => {
+ return (
+    <Menu mode="inline" style={{ height: '100%', borderRight: 0 }}>
+      <Menu.Item key="1">
+        <Link to="/smartphone">smartphone</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link to="/laptops" >Laptops</Link>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <Link to="/Groceries">Groceries</Link>
+      </Menu.Item>
+    </Menu>
+ );
 };
 
-export default Sidebar;
+export default SideBar;

@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <Layout>
-      <Header> <Navbar/></Header>
+      <Header><Navbar/></Header>
       <Layout>
         <Sider width={200}><Sidebar/></Sider>
         <Content><Profile/></Content>
